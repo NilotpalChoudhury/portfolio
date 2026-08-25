@@ -2,7 +2,7 @@
 :root {
     --white: #fffaf5;
     --black: #111111;
-   --primary: #ff7aa2;
+    --primary: #ff7aa2;
     --secondary: #8b9375;
 }
 
@@ -127,7 +127,7 @@ header h3 {
     height: 320px;
     object-fit: cover;
 
-    border-radius: 60%;
+    border-radius: 50%;
     border: 1px solid var(--primary);
 }
 
@@ -142,6 +142,8 @@ header h3 {
 }
 
 
+
+
 main {
     max-width: 1000px;
     margin: auto;
@@ -151,6 +153,12 @@ main {
 section {
     min-height: 80vh;
     padding: 120px 0;
+
+    border-top: 1px solid var(--secondary);
+}
+
+section:first-child {
+    border-top: none;
 }
 
 .section-number {
@@ -230,6 +238,7 @@ section > p {
 
 
 
+
 footer {
     border-top: 2px solid var(--black);
 
@@ -240,6 +249,67 @@ footer {
 
     font-size: 0.8rem;
 }
+
+
+/* links project  */
+
+.project-link {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+
+    border-bottom: 3px solid var(--primary);
+
+    padding-bottom: 4px;
+}
+
+.project-link:hover {
+    color: var(--secondary);
+}
+
+
+/* navigation in project */
+
+.project-nav {
+    display: flex;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.project-nav a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 3px;
+}
+
+.project-nav a:hover {
+    color: var(--secondary);
+}
+
+
+/* project */
+
+.projects-page {
+    padding-top: 40px;
+}
+
+.projects-page section {
+    min-height: auto;
+    padding: 55px 0;
+}
+
+.projects-page .projects-intro {
+    padding-top: 80px;
+    padding-bottom: 45px;
+}
+
+.projects-page section + section {
+    border-top: 1px solid var(--secondary);
+}
+
 
 /* mobile */
 
@@ -268,6 +338,15 @@ footer {
         margin: 60px auto 0;
     }
 
+    .dp-image img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .dp-image p {
+        width: 240px;
+    }
+
     main {
         padding: 0 30px;
     }
@@ -282,6 +361,18 @@ footer {
 
     .explore-grid {
         grid-template-columns: 1fr;
+    }
+
+    .projects-page {
+        padding: 30px;
+    }
+
+    .projects-page section {
+        padding: 45px 0;
+    }
+
+    .projects-page .projects-intro {
+        padding-top: 70px;
     }
 
     footer {
