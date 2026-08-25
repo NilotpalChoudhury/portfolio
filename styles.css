@@ -1,0 +1,292 @@
+
+:root {
+    --white: #fffaf5;
+    --black: #111111;
+   --primary: #ff7aa2;
+    --secondary: #8b9375;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+
+nav {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    z-index: 10;
+}
+
+nav a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    padding: 5px 8px;
+}
+
+nav a:hover {
+    background-color: var(--primary);
+}
+
+
+
+header {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 12% 80px 8%;
+}
+
+.dp-text {
+    max-width: 650px;
+}
+
+.small-text {
+    color: var(--secondary);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 0.9;
+    letter-spacing: -4px;
+}
+
+header h3 {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    color: var(--secondary);
+}
+
+.intro {
+    max-width: 580px;
+    margin-top: 25px;
+    font-size: 1.05rem;
+}
+
+.dp-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.dp-links a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 4px;
+}
+
+.dp-links a:hover {
+    color: var(--secondary);
+}
+
+
+
+.dp-image {
+    text-align: center;
+    margin-right: 40px;
+}
+
+.dp-image img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+
+    border-radius: 60%;
+    border: 1px solid var(--primary);
+}
+
+.dp-image p {
+    width: 280px;
+    margin: 15px auto 0;
+    text-align: center;
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--secondary);
+}
+
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 60px;
+}
+
+section {
+    min-height: 80vh;
+    padding: 120px 0;
+}
+
+.section-number {
+    color: var(--secondary);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 35px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+
+    width: 80px;
+    height: 7px;
+
+    background-color: var(--primary);
+    margin-top: 15px;
+}
+
+section > p {
+    max-width: 700px;
+}
+
+.about-content {
+    max-width: 700px;
+}
+
+.about-content p {
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.explore-grid a {
+    color: var(--black);
+    text-decoration: none;
+
+    border: 2px solid var(--black);
+    padding: 25px;
+
+    min-height: 180px;
+}
+
+.explore-grid a:hover {
+    background-color: var(--primary);
+}
+
+.explore-grid span {
+    color: var(--secondary);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.explore-grid h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 8px;
+}
+
+.explore-grid p {
+    font-size: 0.9rem;
+}
+
+
+
+footer {
+    border-top: 2px solid var(--black);
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 30px 8%;
+
+    font-size: 0.8rem;
+}
+
+/* mobile */
+
+@media (max-width: 800px) {
+
+    nav {
+        right: 10px;
+    }
+
+    nav a {
+        font-size: 0.65rem;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 100px 30px 60px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .dp-image {
+        margin: 60px auto 0;
+    }
+
+    main {
+        padding: 0 30px;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 25px 30px;
+    }
+}
